@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:ListViewTest.Controls"
+             xmlns:local="clr-namespace:ListViewTest"
+             x:Class="ListViewTest.MainPage"
+             Title="ListView‚Ì‚Ý (StackLayout•sŽg—p)"
+             BackgroundColor="DarkGray">
+
+    <ListView x:Name="listView" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid BackgroundColor="Pink" >
+                        <Label Text="{Binding .}" HorizontalOptions="CenterAndExpand" />
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

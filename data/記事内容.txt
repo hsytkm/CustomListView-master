@@ -1,0 +1,28 @@
+Xamarin.Forms の WPF にて、StackLayout内に ListView を配置すると、
+先頭要素のみサイズが小さく、内容が表示されない。
+
+
+StackLayout -> Xamarin.Forms.Platform.WPF.FormsPanel
+
+
+## 調査で見たサイト（関係あるかまだ分からん）
+
+Xamarin.Forms.WPFでListViewのViewCellをウインドウ幅に追従させる
+https://qiita.com/f-miyu/items/cadb22ff866719b3fb26
+
+ListView inside StackLayout: a height problem
+https://forums.xamarin.com/discussion/19874/listview-inside-stacklayout-a-height-problem
+
+ソースコード　FormsPanel
+https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.WPF/FormsPanel.cs
+
+
+レンダラーの基本クラスおよびネイティブ コントロール
+https://docs.microsoft.com/ja-jp/xamarin/xamarin-forms/app-fundamentals/custom-renderer/renderers
+StackLayout	ViewRenderer	UIView	View	FrameworkElement
+
+
+ViewCell のカスタマイズ
+https://docs.microsoft.com/ja-jp/xamarin/xamarin-forms/app-fundamentals/custom-renderer/viewcell
+
+

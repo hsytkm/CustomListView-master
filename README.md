@@ -29,6 +29,8 @@ CustomRenderer により、ListView の DataTemplate を WPF (各PF) に委譲�
 
 Xamarin.Forms の Issues に挙がってた。2020/2/11時点では Open。
 
+Ver3.6.0.XXX なら動作した。
+
 [[Bug] [WPF] Grid + ListView -> first row height not correct](https://github.com/xamarin/Xamarin.Forms/issues/6436)
 
 
