@@ -5,23 +5,39 @@
              xmlns:local="clr-namespace:CustomListView"
              x:Class="CustomListView.MainPage"
              Title="StackLayout 内に ListView を定義"
-             BackgroundColor="DarkGray">
+             BackgroundColor="Blue">
 
-    <StackLayout >
-        <controls:CustomListView x:Name="listView" >
+    <!-- 動作OK：DataTemplateを各PFに委譲することで表示する(XPF開発の意味なし)
+         https://docs.microsoft.com/ja-jp/xamarin/xamarin-forms/app-fundamentals/custom-renderer/viewcell
+    -->
+    <StackLayout BackgroundColor="Red" >
+        <controls:CustomListView x:Name="listView" BackgroundColor="LightPink" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <controls:NativeCell Name="{Binding .}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </controls:CustomListView>
+    </StackLayout>
+
+    <!-- 動作NG：StackLayoutを使っているので、先頭要素のサイズが変
+    <StackLayout BackgroundColor="Red" MinimumHeightRequest="10" >
+        <controls:CustomListView x:Name="listView" BackgroundColor="LightPink">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <controls:CustomViewCell>
-                        <Grid BackgroundColor="Pink" >
-                            <Label Text="{Binding .}" HorizontalOptions="CenterAndExpand" />
+                        <Grid BackgroundColor="Yellow" >
+                            <Label Text="{Binding .}" BackgroundColor="LightGreen" />
                         </Grid>
                     </controls:CustomViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </controls:CustomListView>
     </StackLayout>
+    -->
 
-    <!--
+
+    <!-- 動作OK：StackLayoutを使っていないので期待通りに表示される
     <ListView x:Name="listView" >
         <ListView.ItemTemplate>
             <DataTemplate>

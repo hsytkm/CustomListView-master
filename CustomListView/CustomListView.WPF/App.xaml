@@ -4,10 +4,13 @@
              xmlns:local="clr-namespace:CustomListView.WPF"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        
+        <!-- Use from CustomViewCellRenderer -->
         <DataTemplate x:Key="ListViewItemTemplate">
             <Grid Background="LightYellow">
-                <TextBlock Foreground="#7F3300" FontSize="22" Text="{Binding}" />
+                <TextBlock Text="{Binding Name}" />
             </Grid>
         </DataTemplate>
+        
     </Application.Resources>
 </Application>

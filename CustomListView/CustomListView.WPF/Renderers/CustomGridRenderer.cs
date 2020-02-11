@@ -10,30 +10,19 @@ using CustomListView.Controls;
 using System.Windows.Controls;
 using System.Windows.Media;
 
-[assembly: ExportRenderer(typeof(CustomGrid), typeof(CustomListView.WPF.Renderers.CustomGridRenderer))]
-namespace CustomListView.WPF.Renderers
-{
-    public class CustomGridRenderer : ViewRenderer<CustomGrid, System.Windows.Controls.Grid>
-    {
-        protected override void OnElementChanged(ElementChangedEventArgs<CustomGrid> e)
-        {
-            base.OnElementChanged(e);
-            SetNativeControl(new System.Windows.Controls.Grid()
-            {
-                Background = Brushes.Red,
-                Width = 100,
-                Height = 20,
-            });
-        }
-        
-        //protected override void UpdateHeight()
-        //{
-        //    Debug.WriteLine($"Grid.Height0:{Control.Height:f2}");
+//[assembly: ExportRenderer(typeof(CustomGrid), typeof(CustomListView.WPF.Renderers.CustomGridRenderer))]
+//namespace CustomListView.WPF.Renderers
+//{
+//    public class CustomGridRenderer : ViewRenderer<CustomGrid, FormsPanel>
+//    {
+//        protected override void UpdateHeight()
+//        {
+//            Debug.WriteLine($"Grid.Height0:{Control.Height:f2}");
 
-        //    base.UpdateHeight();
+//            base.UpdateHeight();
 
-        //    Debug.WriteLine($"Grid.Height1:{Control.Height:f2}");
-        //}
+//            Debug.WriteLine($"Grid.Height1:{Control.Height:f2}");
+//        }
 
-    }
-}
+//    }
+//}

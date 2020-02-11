@@ -23,12 +23,12 @@ namespace CustomListView.WPF.Renderers
             {
                 foreach (var item in Control.ItemsSource)
                 {
-                    if (item is ViewCell viewCell)
+                    if (item is ViewCell viewCell && viewCell.View != null)
                     {
                         var element = Platform.GetRenderer(viewCell.View)?.GetNativeElement();
                         if (element != null)
                         {
-                            Debug.WriteLine($"Height0:{element.Height:f2}");
+                            Debug.WriteLine($"CustomListViewRenderer_UpdateHeight_0:{element.Height:f2}");
                         }
                     }
                 }
@@ -40,12 +40,12 @@ namespace CustomListView.WPF.Renderers
             {
                 foreach (var item in Control.ItemsSource)
                 {
-                    if (item is ViewCell viewCell)
+                    if (item is ViewCell viewCell && viewCell.View != null)
                     {
                         var element = Platform.GetRenderer(viewCell.View)?.GetNativeElement();
                         if (element != null)
                         {
-                            Debug.WriteLine($"Height:{element.Height:f2}");
+                            Debug.WriteLine($"CustomListViewRenderer_UpdateHeight_1:{element.Height:f2}");
                         }
                     }
                 }
@@ -61,7 +61,7 @@ namespace CustomListView.WPF.Renderers
             {
                 foreach (var item in Control.ItemsSource)
                 {
-                    if (item is ViewCell viewCell)
+                    if (item is ViewCell viewCell && viewCell.View != null)
                     {
                         var element = Platform.GetRenderer(viewCell.View)?.GetNativeElement();
                         if (element != null)
