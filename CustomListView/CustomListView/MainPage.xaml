@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:CustomListView.Controls"
+             xmlns:local="clr-namespace:CustomListView"
+             x:Class="CustomListView.MainPage"
+             Title="StackLayout 内に ListView を定義"
+             BackgroundColor="DarkGray">
+    <StackLayout >
+        <ListView x:Name="listView" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid BackgroundColor="Pink" >
+                            <Label Text="{Binding .}" HorizontalOptions="CenterAndExpand" />
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+    <!--
+    <controls:CustomListView x:Name="listView" >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout BackgroundColor="LightGreen">
+                        <Label Text="{Binding .}" HorizontalOptions="CenterAndExpand" />
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </controls:CustomListView>
+    -->
+</ContentPage>
