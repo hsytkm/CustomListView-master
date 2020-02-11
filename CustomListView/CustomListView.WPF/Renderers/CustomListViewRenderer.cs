@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +12,47 @@ namespace CustomListView.WPF.Renderers
 {
     public class CustomListViewRenderer : ListViewRenderer
     {
+        protected override void OnElementChanged(ElementChangedEventArgs<ListView> e)
+        {
+            base.OnElementChanged(e);
+        }
+
+        protected override void UpdateHeight()
+        {
+            if (Control?.ItemsSource != null)
+            {
+                foreach (var item in Control.ItemsSource)
+                {
+                    if (item is ViewCell viewCell)
+                    {
+                        var element = Platform.GetRenderer(viewCell.View)?.GetNativeElement();
+                        if (element != null)
+                        {
+                            Debug.WriteLine($"Height0:{element.Height:f2}");
+                        }
+                    }
+                }
+            }
+
+            base.UpdateHeight();
+
+            if (Control?.ItemsSource != null)
+            {
+                foreach (var item in Control.ItemsSource)
+                {
+                    if (item is ViewCell viewCell)
+                    {
+                        var element = Platform.GetRenderer(viewCell.View)?.GetNativeElement();
+                        if (element != null)
+                        {
+                            Debug.WriteLine($"Height:{element.Height:f2}");
+                        }
+                    }
+                }
+            }
+
+        }
+
         protected override void UpdateWidth()
         {
             base.UpdateWidth();

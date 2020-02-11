@@ -6,22 +6,23 @@
              x:Class="CustomListView.MainPage"
              Title="StackLayout 内に ListView を定義"
              BackgroundColor="DarkGray">
+
     <StackLayout >
-        <ListView x:Name="listView" >
+        <controls:CustomListView x:Name="listView" >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
+                    <controls:CustomViewCell>
                         <Grid BackgroundColor="Pink" >
                             <Label Text="{Binding .}" HorizontalOptions="CenterAndExpand" />
                         </Grid>
-                    </ViewCell>
+                    </controls:CustomViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
-        </ListView>
+        </controls:CustomListView>
     </StackLayout>
 
     <!--
-    <controls:CustomListView x:Name="listView" >
+    <ListView x:Name="listView" >
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
@@ -31,6 +32,7 @@
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
-    </controls:CustomListView>
+    </ListView>
     -->
+
 </ContentPage>

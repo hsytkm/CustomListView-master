@@ -13,7 +13,7 @@ namespace CustomListView
         {
             InitializeComponent();
 
-            listView.ItemsSource = Enumerable.Range(0, 10).Select(i => $"Item{i}").ToList();
+            listView.ItemsSource = Enumerable.Range(0, 3).Select(i => $"Item{i}").ToList();
         }
     }
 }

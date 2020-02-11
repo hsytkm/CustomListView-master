@@ -76,6 +76,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Renderers\CustomGridRenderer.cs" />
+    <Compile Include="Renderers\CustomViewCellRenderer.cs" />
     <Compile Include="Renderers\CustomListViewRenderer.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
