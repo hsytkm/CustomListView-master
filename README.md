@@ -1,5 +1,4 @@
 # CustomListView
 
-Qiita
-
-[Xamarin.Forms.WPFでListViewのViewCellをウインドウ幅に追従させる](https://qiita.com/f-miyu/items/cadb22ff866719b3fb26)
+Xamarin.Forms の WPF にて、StackLayout内に ListView を配置すると、先頭要素のみサイズが小さくなり内容が表示されない。
+の解析
